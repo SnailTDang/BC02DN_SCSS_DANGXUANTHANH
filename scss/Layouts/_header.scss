@@ -1,0 +1,56 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100001;
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        .brand-logo {
+            img {
+                height: 80px;
+            }
+        }
+        .menu-items {
+            nav {
+                display: flex;
+                .menu {
+                    display: flex;
+                    .item {
+                        padding: 0 25px;
+                        list-style: none;
+                        .menu-link {
+                            text-decoration: none;
+                            line-height: 80px;
+                        }
+                    }
+                }
+                .contact-item {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+//reponsive
+@include responsive("large"){
+    .headerPhone{
+        .navbar-toggler{
+            background: $color-white-1;
+        }
+        .navbar-nav {
+            .nav-item {
+                text-align: center;
+            }
+        }
+    }
+}
