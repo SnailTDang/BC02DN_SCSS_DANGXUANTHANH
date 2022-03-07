@@ -543,6 +543,11 @@ header .menu-header .menu-items nav .menu .item .active:after {
   transition: all 0.3s;
 }
 
+header .menu-header .menu-items nav .menu .item .tick:after {
+  width: 8px;
+  height: 8px;
+}
+
 header .menu-header .menu-items nav .contact-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -595,8 +600,8 @@ header .menu-header .menu-items nav .contact-item .phone-number i {
 
 @-webkit-keyframes hidenMenu {
   from {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
   }
   to {
     -webkit-transform: translateY(0);
@@ -654,6 +659,18 @@ header .menu-header .menu-items nav .contact-item .phone-number i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.banner .banner-content .banner-heading .heading-content {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.banner .banner-content .banner-heading .heading-content .heading-sub {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b61984;
 }
 
 .row {

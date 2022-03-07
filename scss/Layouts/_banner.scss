@@ -18,6 +18,12 @@
         .banner-heading {
             display: flex;
             align-items: center;
+            .heading-content {
+                @include styleText ($fs-4, $fw-3, $color-dark-1);
+                .heading-sub {
+                    @include styleText($fs-2, $fw-2, $color-violet-1);
+                }
+            }
         }
     }
     

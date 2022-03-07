@@ -56,6 +56,12 @@ header {
                                 transition: all 0.3s;
                             }
                         }
+                        .tick{
+                            &:after {
+                                width: 8px;
+                                height: 8px;
+                            }
+                        }
                         
                     }
                 }
@@ -102,14 +108,16 @@ header {
     opacity: 0;
 }
 
+
 @-webkit-keyframes hidenMenu {
     from {
-        transform: translateY(150%);
+        transform: translateY(-150%);
     }
     to {
         transform: translateY(0);
     }
 }
+
 
 @keyframes hidenMenu {
     from {
