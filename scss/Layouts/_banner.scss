@@ -4,17 +4,21 @@
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
         height: 100%;
         .bg-bottom {
             position: absolute;
             bottom: 0;
+            left: 0;
+            right: 0;
         }
     }
-    .banner {
+    .banner-content {
         padding: 60px 0;
         .banner-heading {
             display: flex;
             align-items: center;
         }
-    }   
+    }
+    
 }
