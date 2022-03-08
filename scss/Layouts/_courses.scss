@@ -1,0 +1,17 @@
+.find-course {
+    position: relative;
+    padding: 60px 0 0 0 ;
+    .background {
+        img {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    .col-xl-5 {
+        display: flex;
+        align-items: center;
+        .find-form {
+            padding: 0 25px;
+        }
+    }
+}

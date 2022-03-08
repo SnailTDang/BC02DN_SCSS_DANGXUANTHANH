@@ -9,15 +9,20 @@
   padding: 1.1em 1.5em;
   margin: 6px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   background: transparent;
+  border: none;
   transition: all 300ms ease;
   @include styleText($fs-9, $fw-2, $color-white-3);
-  border-radius: 50px;
-  box-shadow: 0 0 0 3em $color-violet-1 inset;
+  @include styleButton(transparent,1.1em, 1.5em, 50px, $color-violet-1);
   &:hover {
       color: $color-violet-1;
       box-shadow: 0 0 0 1px $color-violet-1 inset;
   }
+}
+
+.btn-send {
+  @extend .button;
+  width: 150px;
 }

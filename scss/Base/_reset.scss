@@ -388,3 +388,13 @@ h1, h2, h3, h4, h5, h6, a {
 a:hover{
   text-decoration: none;
 }
+
+input, select, textarea {
+  outline: none;
+  font: inherit;
+  width: 100%;
+  background: transparent;
+  line-height: 1;
+  display: block;
+  color: inherit;
+}

@@ -1,20 +1,53 @@
-.row {
-    justify-content: center;
-}
-
 .profile {
     padding: 30px 0 0 0;
     background-color: #dcd1f0;
     position: relative;
     .background {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
         img {
             position: absolute;
             bottom: 0;
+        }
+    }
+    .container {
+        .row {
+            .col-xl-3 {
+                padding: 0 20px;
+                margin-bottom: 40px;
+                .profile-item {
+                    border-radius: 10px;
+                    overflow: hidden;
+                    text-align: center;
+                    background-color: $color-white-3;
+                    transition: all 0.3s linear;
+                    &:hover {
+                        box-shadow: 0 30px 30px -10px #0000002e;
+                    }
+                    .profile-img {
+                        overflow: hidden;
+                        img {
+                            transition: all 0.3s linear;
+                            &:hover {
+                            transform: scale(1.05);
+                            }
+                        }
+                    }
+                    .profile-content {
+                        padding: 30px;
+                        .profile-name {
+                            .country {
+                                @include styleText($fs-9, $fw-2, $color-violet-1)
+                            }
+                            .name {
+                                margin-top: 0.3em;
+                                @include styleText($fs-5 - 0
+                            .5, $fw-3, $color-dark-1)
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
         }
     }
 }

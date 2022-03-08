@@ -385,7 +385,17 @@ a:hover {
   text-decoration: none;
 }
 
-.button {
+input, select, textarea {
+  outline: none;
+  font: inherit;
+  width: 100%;
+  background: transparent;
+  line-height: 1;
+  display: block;
+  color: inherit;
+}
+
+.button, .btn-send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,55 +416,38 @@ a:hover {
   padding: 1.1em 1.5em;
   margin: 6px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   background: transparent;
+  border: none;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   font-size: 0.9rem;
   font-weight: 600;
   color: #fff;
+  background: transparent;
+  padding: 1.1em 1.5em;
   border-radius: 50px;
   -webkit-box-shadow: 0 0 0 3em #b61984 inset;
           box-shadow: 0 0 0 3em #b61984 inset;
 }
 
-.button:hover {
+.button:hover, .btn-send:hover {
   color: #b61984;
   -webkit-box-shadow: 0 0 0 1px #b61984 inset;
           box-shadow: 0 0 0 1px #b61984 inset;
 }
 
-.cardPhone {
-  -webkit-box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
-          box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
-  background-color: #f5f9fe;
-  border: none;
-  padding: 30px;
-  margin-bottom: 30px;
+.btn-send {
+  width: 150px;
 }
 
-.cardPhone img {
-  -webkit-box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
-          box-shadow: 6px 6px 12px #e2ebfc, -6px -6px 12px #fff;
-  border-radius: 8px;
-  height: 290px;
-}
-
-.cardPhone .cardPhone__title {
-  font-size: 21px;
-  font-weight: 700;
-  color: #1d365e;
-}
-
-.cardPhone .cardPhone__rating {
-  color: #f9d412;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
 }
 
 .container {
@@ -589,7 +582,7 @@ header .menu-header .menu-items nav .contact-item .phone-number i {
   line-height: 48px !important;
 }
 
-.white-bg .button {
+.white-bg .button, .white-bg .btn-send {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
 }
@@ -633,14 +626,6 @@ header .menu-header .menu-items nav .contact-item .phone-number i {
   position: relative;
 }
 
-.banner .background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-}
-
 .banner .background .bg-bottom {
   position: absolute;
   bottom: 0;
@@ -673,24 +658,10 @@ header .menu-header .menu-items nav .contact-item .phone-number i {
   color: #b61984;
 }
 
-.row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .profile {
   padding: 30px 0 0 0;
   background-color: #dcd1f0;
   position: relative;
-}
-
-.profile .background {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
 }
 
 .profile .background img {
@@ -698,7 +669,76 @@ header .menu-header .menu-items nav .contact-item .phone-number i {
   bottom: 0;
 }
 
+.profile .container .row .col-xl-3 {
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.profile .container .row .col-xl-3 .profile-item {
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.profile .container .row .col-xl-3 .profile-item:hover {
+  -webkit-box-shadow: 0 30px 30px -10px #0000002e;
+          box-shadow: 0 30px 30px -10px #0000002e;
+}
+
+.profile .container .row .col-xl-3 .profile-item .profile-img {
+  overflow: hidden;
+}
+
+.profile .container .row .col-xl-3 .profile-item .profile-img img {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.profile .container .row .col-xl-3 .profile-item .profile-img img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.profile .container .row .col-xl-3 .profile-item .profile-content {
+  padding: 30px;
+}
+
+.profile .container .row .col-xl-3 .profile-item .profile-content .profile-name .country {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b61984;
+}
+
+.profile .container .row .col-xl-3 .profile-item .profile-content .profile-name .name {
+  margin-top: 0.3em;
+  font-size: 1.6rem 0.5;
+  font-weight: 700;
+  color: #000000;
+}
+
 .find-course {
+  position: relative;
   padding: 60px 0 0 0;
+}
+
+.find-course .background img {
+  position: absolute;
+  bottom: 0;
+}
+
+.find-course .col-xl-5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.find-course .col-xl-5 .find-form {
+  padding: 0 25px;
 }
 /*# sourceMappingURL=main.css.map */
